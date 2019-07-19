@@ -1,0 +1,99 @@
+// Variables
+$orange: #f2951e;
+$darkOrange: #d48117;
+$darkGrey: #27282d;
+$pictoGrey: #474747;
+$textGrey: #adadad;
+$textBrown: #5d3708;
+$headerMargin: 13.5em;
+
+// Mixins
+@mixin btn($color, $bcg, $width, $height) {
+  color: $color;
+  background-color: $bcg;
+  width: $width;
+  height: $height;
+  border: none;
+}
+
+/*----- TOP BANNER -----*/
+header {
+  background: url('../../assets/67571377_2125026250953034_5695356831858163712_n.jpg')
+    center no-repeat;
+  height: 900px;
+  background-attachment: fixed;
+}
+#top-banner,
+#top-banner i {
+  background-color: $darkGrey;
+  color: $textGrey;
+  // LEFT SIDE
+  #top-banner-left {
+    padding: 0 3em;
+    margin-left: $headerMargin;
+    i {
+      border-right: 1px solid $textGrey;
+      padding-left: 15px;
+      padding-right: 16px;
+      line-height: 2.5;
+    }
+  }
+
+  // RIGHT SIDE
+  #top-banner-right {
+    margin-right: $headerMargin;
+    button {
+      @include btn(white, $orange, 8.25em, 2.5em);
+    }
+  }
+}
+/*----- ./END TOP BANNER -----*/
+/*----- NAV -----*/
+nav {
+  text-transform: uppercase;
+  .navbar-brand {
+    margin-left: $headerMargin;
+  }
+  .navbar-collapse {
+    margin-right: $headerMargin;
+  }
+}
+/*----- HEADER MENU -----*/
+#header-menu {
+  border-top: 1px solid $textGrey;
+  .header-menu {
+    margin-top: 6.875em;
+    .btn-group {
+      margin-left: $headerMargin;
+      margin-right: $headerMargin;
+      height: 9.5625em;
+      background-color: $darkGrey;
+      border-top: 1px solid $orange;
+
+      button {
+        background-color: $darkGrey;
+        border-color: $darkGrey;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+    .header-btn {
+      position: relative;
+      margin-top: -1.5em;
+    }
+    .header-btn button:nth-child(1) {
+      @include btn(white, $orange, 13.5em, 3.5625em);
+    }
+    .header-btn button:nth-child(2) {
+      @include btn($textBrown, $darkOrange, 13.5em, 3.5625em);
+    }
+  }
+}
+
+h2 {
+  color: $orange;
+}
+
+.search-btn {
+  @include btn(white, $orange, 2em, 5em);
+}

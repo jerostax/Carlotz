@@ -1,0 +1,101 @@
+/*----- TOP BANNER -----*/
+header {
+  background: url("../../assets/67571377_2125026250953034_5695356831858163712_n.jpg") center no-repeat;
+  height: 900px;
+  background-attachment: fixed;
+}
+
+#top-banner,
+#top-banner i {
+  background-color: #27282d;
+  color: #adadad;
+}
+#top-banner #top-banner-left,
+#top-banner i #top-banner-left {
+  padding: 0 3em;
+  margin-left: 13.5em;
+}
+#top-banner #top-banner-left i,
+#top-banner i #top-banner-left i {
+  border-right: 1px solid #adadad;
+  padding-left: 15px;
+  padding-right: 16px;
+  line-height: 2.5;
+}
+#top-banner #top-banner-right,
+#top-banner i #top-banner-right {
+  margin-right: 13.5em;
+}
+#top-banner #top-banner-right button,
+#top-banner i #top-banner-right button {
+  color: white;
+  background-color: #f2951e;
+  width: 8.25em;
+  height: 2.5em;
+  border: none;
+}
+
+/*----- ./END TOP BANNER -----*/
+/*----- NAV -----*/
+nav {
+  text-transform: uppercase;
+}
+nav .navbar-brand {
+  margin-left: 13.5em;
+}
+nav .navbar-collapse {
+  margin-right: 13.5em;
+}
+
+/*----- HEADER MENU -----*/
+#header-menu {
+  border-top: 1px solid #adadad;
+}
+#header-menu .header-menu {
+  margin-top: 6.875em;
+}
+#header-menu .header-menu .btn-group {
+  margin-left: 13.5em;
+  margin-right: 13.5em;
+  height: 9.5625em;
+  background-color: #27282d;
+  border-top: 1px solid #f2951e;
+}
+#header-menu .header-menu .btn-group button {
+  background-color: #27282d;
+  border-color: #27282d;
+  color: white;
+  text-transform: uppercase;
+}
+#header-menu .header-menu .header-btn {
+  position: relative;
+  margin-top: -1.5em;
+}
+#header-menu .header-menu .header-btn button:nth-child(1) {
+  color: white;
+  background-color: #f2951e;
+  width: 13.5em;
+  height: 3.5625em;
+  border: none;
+}
+#header-menu .header-menu .header-btn button:nth-child(2) {
+  color: #5d3708;
+  background-color: #d48117;
+  width: 13.5em;
+  height: 3.5625em;
+  border: none;
+}
+
+h2 {
+  color: #f2951e;
+}
+
+.search-btn {
+  color: white;
+  background-color: #f2951e;
+  width: 2em;
+  height: 5em;
+  border: none;
+}
+
+/*# sourceMappingURL=style.css.map */
