@@ -38,11 +38,19 @@ body {
 .nav-container {
   background-color: white;
 }
-a {
+a,
+button {
   transition-duration: 0.5s;
+}
+a:hover,
+button:hover {
+  opacity: 0.8;
 }
 li {
   list-style: none;
+}
+button:focus {
+  outline: none;
 }
 /*----- TOP BAR -----*/
 header {
@@ -103,6 +111,18 @@ nav {
       width: 100%;
       justify-content: space-between;
     }
+    .nav-link {
+      color: $textGrey !important;
+    }
+    .nav-link:hover {
+      color: $orange !important;
+      opacity: 1;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+    }
   }
 }
 /*----- HEADER MENU -----*/
@@ -116,6 +136,7 @@ nav {
       border-top: 1px solid $orange;
 
       button {
+        border-style: none !important;
         background-color: $darkGrey;
         border-color: $darkGrey;
         color: white;
@@ -145,6 +166,14 @@ nav {
       i {
         margin-right: 0.5em;
       }
+      button:hover {
+        opacity: 1;
+        transform: scale(1.3);
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+      }
     }
     .header-btn button:nth-child(1) {
       @include btn(white, $orange, uppercase, 15em, 3.5625em, $smallText);
@@ -169,6 +198,7 @@ nav {
     }
     .pic-container {
       position: relative;
+      transition-duration: 0.5s;
 
       img {
         position: relative;
@@ -209,6 +239,14 @@ nav {
           padding: 2px;
         }
       }
+    }
+    .pic-container:hover {
+      transform: scale(1.3);
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      z-index: 1000;
     }
   }
   .last-deals {
@@ -305,6 +343,13 @@ nav {
     margin-top: 100px;
     margin-bottom: 20px;
   }
+  .content {
+    .row {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+    }
+  }
+
   ul {
     font-size: $smallText;
     letter-spacing: 2px;
@@ -318,7 +363,7 @@ nav {
 /*----- FOOTER -----*/
 footer {
   margin-top: 100px;
-  color: $textGrey;
+
   font-family: $helvetica;
   background: url('../../assets/footer-bcg.jpg') center no-repeat;
   padding-bottom: 50px;
@@ -329,6 +374,13 @@ footer {
     text-transform: uppercase;
     li {
       margin-top: 50px;
+      a {
+        color: $textGrey;
+      }
+      a:hover {
+        color: $textGrey;
+        text-decoration: none;
+      }
     }
   }
   .border-footer {
@@ -343,5 +395,6 @@ footer {
     text-align: center;
     font-size: $smallText;
     letter-spacing: 2px;
+    color: $textGrey;
   }
 }
