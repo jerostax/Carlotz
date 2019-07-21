@@ -1,0 +1,12 @@
+@media screen and (max-width: 650px) {
+  #top-bar {
+    span {
+      padding: 10px;
+    }
+    #top-bar-right {
+      span {
+        display: none;
+      }
+    }
+  }
+}

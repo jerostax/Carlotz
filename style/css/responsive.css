@@ -1,0 +1,10 @@
+@media screen and (max-width: 650px) {
+  #top-bar span {
+    padding: 10px;
+  }
+  #top-bar #top-bar-right span {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

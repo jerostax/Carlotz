@@ -3,69 +3,109 @@ $orange: #f2951e;
 $darkOrange: #d48117;
 $darkGrey: #27282d;
 $pictoGrey: #474747;
-$textGrey: #adadad;
+$textGrey: #929292;
 $textBrown: #5d3708;
-$headerMargin: 13.5em;
+$openSans: 'Open Sans', sans-serif;
+$helvetica: helvetica;
+$container: 1170px;
+$smallText: 0.75em;
+$mediumText: 0.875em;
+$largeText: 0.9375em;
 
 // Mixins
-@mixin btn($color, $bcg, $width, $height) {
+@mixin btn($color, $bcg, $textTransform, $width, $height, $fontSize) {
   color: $color;
   background-color: $bcg;
+  text-transform: $textTransform;
   width: $width;
   height: $height;
   border: none;
+  font-size: $smallText;
+  font-family: $helvetica;
+  padding: 0;
 }
-
-/*----- TOP BANNER -----*/
+/*----- GENERAL STYLES -----*/
+body {
+  background-color: #f6f6f6;
+}
+.content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $container;
+}
+.nav-container {
+  background-color: white;
+}
+a {
+  transition-duration: 0.5s;
+}
+li {
+  list-style: none;
+}
+/*----- TOP BAR -----*/
 header {
   background: url('../../assets/67571377_2125026250953034_5695356831858163712_n.jpg')
     center no-repeat;
   height: 900px;
-  background-attachment: fixed;
 }
-#top-banner,
-#top-banner i {
+#top-bar,
+#top-bar i {
   background-color: $darkGrey;
   color: $textGrey;
   // LEFT SIDE
-  #top-banner-left {
-    padding: 0 3em;
-    margin-left: $headerMargin;
+  #top-bar-left {
+    span {
+      font-family: $openSans;
+      font-size: $smallText;
+    }
     i {
       border-right: 1px solid $textGrey;
-      padding-left: 15px;
-      padding-right: 16px;
-      line-height: 2.5;
+      padding: 13px 15px;
+      font-size: $mediumText;
+    }
+    a:hover {
+      opacity: 0.5;
     }
   }
 
   // RIGHT SIDE
-  #top-banner-right {
-    margin-right: $headerMargin;
+  #top-bar-right {
+    span {
+      font-family: $helvetica;
+      font-size: $smallText;
+      padding-right: 10px;
+    }
     button {
-      @include btn(white, $orange, 8.25em, 2.5em);
+      @include btn(white, $orange, uppercase, 8.25em, 40px, $smallText);
     }
   }
 }
-/*----- ./END TOP BANNER -----*/
+/*----- ./END TOP BAR -----*/
 /*----- NAV -----*/
+
 nav {
   text-transform: uppercase;
-  .navbar-brand {
-    margin-left: $headerMargin;
+  background-color: white;
+  padding: 35px 0 !important;
+  letter-spacing: 1px;
+  .navbar-brand img {
+    width: 134px;
   }
   .navbar-collapse {
-    margin-right: $headerMargin;
+    font-family: $helvetica;
+    font-size: $largeText;
+    .navbar-nav {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 }
 /*----- HEADER MENU -----*/
 #header-menu {
   border-top: 1px solid $textGrey;
   .header-menu {
-    margin-top: 6.875em;
+    margin-top: 5em;
     .btn-group {
-      margin-left: $headerMargin;
-      margin-right: $headerMargin;
       height: 9.5625em;
       background-color: $darkGrey;
       border-top: 1px solid $orange;
@@ -75,25 +115,216 @@ nav {
         border-color: $darkGrey;
         color: white;
         text-transform: uppercase;
+        font-family: $helvetica;
+        font-size: $largeText;
+      }
+      .btn-group-dropdown {
+        margin-top: 3em;
+      }
+      .btn-group-dropdown::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: 1px;
+        background-color: white;
+        transition-duration: 0.5s;
+      }
+      .btn-group-dropdown:hover::after {
+        width: 100%;
       }
     }
     .header-btn {
       position: relative;
       margin-top: -1.5em;
+      i {
+        margin-right: 0.5em;
+      }
     }
     .header-btn button:nth-child(1) {
-      @include btn(white, $orange, 13.5em, 3.5625em);
+      @include btn(white, $orange, uppercase, 13.5em, 3.5625em, $smallText);
     }
     .header-btn button:nth-child(2) {
-      @include btn($textBrown, $darkOrange, 13.5em, 3.5625em);
+      @include btn($textBrown, $darkOrange, none, 13.5em, 3.5625em, $smallText);
     }
   }
 }
 
-h2 {
-  color: $orange;
+/*----- SECTION ONE -----*/
+#section-one {
+  background: url('../../assets/road-bcg.jpg') center no-repeat;
+  .row {
+    margin-top: 30px;
+    div,
+    img {
+      height: 270px;
+    }
+    .pic-container {
+      position: relative;
+
+      img {
+        position: relative;
+        width: 100%;
+      }
+      .bottom-banner {
+        position: absolute;
+        background-color: $darkGrey;
+        height: 60px !important;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-transform: uppercase;
+        padding-left: 20px;
+        letter-spacing: 2px;
+        font-size: $smallText;
+        display: table;
+        span {
+          vertical-align: middle;
+          display: table-cell;
+        }
+      }
+      .car-price {
+        background-color: $orange;
+        width: 73px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+        font-size: $smallText;
+        font-family: $helvetica;
+        letter-spacing: 2px;
+        font-weight: bold;
+        display: table;
+        span {
+          vertical-align: middle;
+          display: table-cell;
+          padding: 2px;
+        }
+      }
+    }
+  }
+  .last-deals {
+    background-color: $orange;
+    color: white;
+    font-family: $helvetica;
+    div {
+      margin: 0 auto;
+      width: 50%;
+    }
+    p {
+      margin: 0;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .last {
+      font-size: 1.375em;
+      letter-spacing: 4px;
+    }
+    .last::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: white;
+      margin: 0 auto;
+      margin-top: 95px;
+      margin-bottom: 20px;
+    }
+    .deals {
+      font-size: 2em;
+      letter-spacing: 5px;
+      margin-bottom: 90px;
+    }
+  }
+  button {
+    @include btn(white, $orange, uppercase, 13.5em, 3.5625em, $smallText);
+    display: block;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
 }
 
-.search-btn {
-  @include btn(white, $orange, 2em, 5em);
+/*----- SECTION TWO -----*/
+
+#section-two {
+  background: url('../../assets/car-bcg-2.jpg') center no-repeat;
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 120px;
+  }
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: #f8f8f8;
+    font-weight: 300;
+    font-family: $helvetica;
+    margin-bottom: 140px;
+  }
+  p:before {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 1px;
+    background-color: $orange;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+/*----- SECTION THREE -----*/
+#section-three {
+  font-family: $helvetica;
+  h2 {
+    font-size: 22px;
+    letter-spacing: 4px;
+    color: $darkGrey;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+  h2:before {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    background-color: $darkGrey;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  ul {
+    font-size: $smallText;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: $textGrey;
+    font-weight: 300;
+    border-left: 1px solid $textGrey;
+  }
+}
+
+/*----- FOOTER -----*/
+footer {
+  color: $textGrey;
+  font-family: $helvetica;
+  ul {
+    font-size: $largeText;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  .border-footer {
+    background-color: $textGrey;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  p {
+    text-align: center;
+    font-size: $smallText;
+    letter-spacing: 2px;
+  }
 }

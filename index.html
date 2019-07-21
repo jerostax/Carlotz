@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="Test d'intégration IPPON" />
-    <title>Carlotz</title>
+    <title>CarLotz</title>
 
     <!-- LINKS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -21,120 +25,136 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="style/css/responsive.css" type="text/css" />
   </head>
   <body>
     <!-- HEADER -->
     <header>
       <!-- TOP BANNER -->
-      <div id="top-banner" class="d-flex justify-content-between">
-        <div id="top-banner-left">
-          <span>Follow us on :</span>
-          <a href=""><i class="fab fa-facebook-f"></i></a>
-          <a href=""><i class="fab fa-twitter"></i></a>
-          <a href=""><i class="fab fa-linkedin-in"></i></a>
-          <a href=""><i class="fab fa-youtube"></i></a>
-        </div>
-        <div id="top-banner-right">
-          <span>Check the status of your car for sale at CarLotz!</span>
-          <button type="button">SIGN IN</button>
+      <div id="top-bar">
+        <div class="content d-flex justify-content-between">
+          <div id="top-bar-left">
+            <span>Follow us on :</span>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+          </div>
+          <div id="top-bar-right">
+            <span>Check the status of your car for sale at CarLotz!</span>
+            <button type="button">Sign in</button>
+          </div>
         </div>
       </div>
       <!-- NAV BAR-->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sell your vehicule</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Search inventory</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">How it works</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Locations</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="nav-container">
+        <nav class="navbar navbar-expand-lg navbar-light content">
+          <a class="navbar-brand" href="#"
+            ><img src="assets/logo-carlotz.png" alt="Logo de Carlotz"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sell your vehicule</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Search inventory</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How it works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Locations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
       <!-- HEADER MENU -->
       <div id="header-menu">
-        <div class="header-menu">
+        <div class="header-menu content">
           <div class="btn-group d-flex justify-content-around">
-            <button
-              type="button"
-              class=" dropdown-toggle"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dealer
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <div class="btn-group-dropdown">
+              <button
+                type="button"
+                class=" dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dealer
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
             </div>
-            <button
-              type="button"
-              class=" dropdown-toggle"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              All years
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <div class="btn-group-dropdown">
+              <button
+                type="button"
+                class=" dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                All years
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
             </div>
-            <button
-              type="button"
-              class=" dropdown-toggle"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              All makes
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <div class="btn-group-dropdown">
+              <button
+                type="button"
+                class=" dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                All makes
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
             </div>
-            <button
-              type="button"
-              class=" dropdown-toggle"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              All models
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+            <div class="btn-group-dropdown">
+              <button
+                type="button"
+                class=" dropdown-toggle"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                All models
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
             </div>
           </div>
           <div class="header-btn d-flex justify-content-center">
@@ -148,30 +168,315 @@
     </header>
     <!-- MAIN -->
     <main>
+      <!-- SECTION ONE -->
       <section id="section-one">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3">1</div>
-            <div class="col-lg-6">2</div>
-            <div class="col-lg-3">3</div>
+        <div class="row content">
+          <div class="col-lg-3 last-deals">
+            <div>
+              <p class="last">Last</p>
+              <p class="deals">Deals</p>
+            </div>
           </div>
-          <div class="row">
-            <div class="col-lg-6">1</div>
-            <div class="col-lg-3">2</div>
-            <div class="col-lg-3">3</div>
+          <div class="col-lg-6">
+            <div class="pic-container">
+              <img src="assets/car1.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <div class="col-lg-3">1</div>
-            <div class="col-lg-6">2</div>
-            <div class="col-lg-3">3</div>
+          <div class="col-lg-3">
+            <div class="pic-container">
+              <img src="assets/car2.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row content">
+          <div class="col-lg-6">
+            <div class="pic-container">
+              <img src="assets/car3.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="pic-container">
+              <img src="assets/car4.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="pic-container">
+              <img src="assets/car5.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row content">
+          <div class="col-lg-3">
+            <div class="pic-container">
+              <img src="assets/car6.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="pic-container">
+              <img src="assets/car7.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="pic-container">
+              <img src="assets/car8.jpg" alt="Voiture" />
+              <div class="car-price"><span>$21 , 500</span></div>
+              <div class="bottom-banner">
+                <span>2009 acura mdx tech/ entertainment pkg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button">+ 300 results</button>
+      </section>
+      <!-- SECTION TWO -->
+      <section id="section-two">
+        <div class="row content">
+          <div class="col-lg-4">
+            <img src="assets/people.png" alt="Picto personnes" />
+            <p>
+              choose your <br />
+              dealer contact
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/smile.png" alt="Picto personnes" />
+            <p>Get pre-approved <br />in seconds</p>
+          </div>
+          <div class="col-lg-4">
+            <img src="assets/inbox.png" alt="Picto personnes" />
+            <p>Chat live <br />contact atonce</p>
           </div>
         </div>
       </section>
-      <h2>Main</h2>
+      <!-- SECTION THREE -->
+      <section id="section-three">
+        <div class="content">
+          <h2>Car for sale by make</h2>
+          <div class="row">
+            <div class="col-lg-2">
+              <ul>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <ul>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+                <li>
+                  Acura (XX)
+                </li>
+                <li>
+                  Aprilia (XX)
+                </li>
+                <li>
+                  Audi (XX)
+                </li>
+                <li>
+                  BMW (XX)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- FOOTER -->
     <footer>
-      <h2>Footer</h2>
+      <div class="content">
+        <ul class="d-flex justify-content-around">
+          <li>
+            home
+          </li>
+          <li>
+            contact us
+          </li>
+          <li>
+            seller faqs
+          </li>
+          <li>
+            buyer faqs
+          </li>
+          <li>
+            search inventory
+          </li>
+        </ul>
+        <div class="border-footer"></div>
+        <p>Copyright &copy2015 CarLotz. All Rights Reserved</p>
+        <p>Privacy Policy - Terms of Use</p>
+      </div>
     </footer>
     <!-- SCRIPTS -->
     <script
