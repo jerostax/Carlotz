@@ -23,6 +23,8 @@ $largeText: 0.9375em;
   font-size: $smallText;
   font-family: $helvetica;
   padding: 0;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 /*----- GENERAL STYLES -----*/
 body {
@@ -52,6 +54,8 @@ header {
 #top-bar i {
   background-color: $darkGrey;
   color: $textGrey;
+  letter-spacing: 2px;
+  font-weight: 300;
   // LEFT SIDE
   #top-bar-left {
     span {
@@ -80,20 +84,21 @@ header {
     }
   }
 }
-/*----- ./END TOP BAR -----*/
+
 /*----- NAV -----*/
 
 nav {
   text-transform: uppercase;
   background-color: white;
   padding: 35px 0 !important;
-  letter-spacing: 1px;
   .navbar-brand img {
     width: 134px;
   }
   .navbar-collapse {
     font-family: $helvetica;
     font-size: $largeText;
+    font-weight: 300;
+    letter-spacing: 2px;
     .navbar-nav {
       width: 100%;
       justify-content: space-between;
@@ -142,10 +147,10 @@ nav {
       }
     }
     .header-btn button:nth-child(1) {
-      @include btn(white, $orange, uppercase, 13.5em, 3.5625em, $smallText);
+      @include btn(white, $orange, uppercase, 15em, 3.5625em, $smallText);
     }
     .header-btn button:nth-child(2) {
-      @include btn($textBrown, $darkOrange, none, 13.5em, 3.5625em, $smallText);
+      @include btn($textBrown, $darkOrange, none, 15em, 3.5625em, $smallText);
     }
   }
 }
@@ -154,7 +159,10 @@ nav {
 #section-one {
   background: url('../../assets/road-bcg.jpg') center no-repeat;
   .row {
-    margin-top: 30px;
+    .col-lg-3,
+    .col-lg-6 {
+      margin-top: 30px;
+    }
     div,
     img {
       height: 270px;
@@ -207,9 +215,11 @@ nav {
     background-color: $orange;
     color: white;
     font-family: $helvetica;
+    position: absolute;
+    width: 90%;
     div {
-      margin: 0 auto;
       width: 50%;
+      margin: 0 auto;
     }
     p {
       margin: 0;
@@ -278,14 +288,15 @@ nav {
 /*----- SECTION THREE -----*/
 #section-three {
   font-family: $helvetica;
-  h2 {
+  h1 {
     font-size: 22px;
     letter-spacing: 4px;
     color: $darkGrey;
     font-weight: bold;
     margin-bottom: 100px;
+    text-transform: uppercase;
   }
-  h2:before {
+  h1:before {
     content: '';
     display: block;
     width: 25%;
@@ -306,13 +317,19 @@ nav {
 
 /*----- FOOTER -----*/
 footer {
+  margin-top: 100px;
   color: $textGrey;
   font-family: $helvetica;
+  background: url('../../assets/footer-bcg.jpg') center no-repeat;
+  padding-bottom: 50px;
   ul {
     font-size: $largeText;
     letter-spacing: 2px;
     font-weight: 300;
     text-transform: uppercase;
+    li {
+      margin-top: 50px;
+    }
   }
   .border-footer {
     background-color: $textGrey;

@@ -31,6 +31,8 @@ header {
 #top-bar i {
   background-color: #27282d;
   color: #929292;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 #top-bar #top-bar-left span,
 #top-bar i #top-bar-left span {
@@ -64,15 +66,15 @@ header {
   font-size: 0.75em;
   font-family: helvetica;
   padding: 0;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
-/*----- ./END TOP BAR -----*/
 /*----- NAV -----*/
 nav {
   text-transform: uppercase;
   background-color: white;
   padding: 35px 0 !important;
-  letter-spacing: 1px;
 }
 nav .navbar-brand img {
   width: 134px;
@@ -80,6 +82,8 @@ nav .navbar-brand img {
 nav .navbar-collapse {
   font-family: helvetica;
   font-size: 0.9375em;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 nav .navbar-collapse .navbar-nav {
   width: 100%;
@@ -132,30 +136,35 @@ nav .navbar-collapse .navbar-nav {
   color: white;
   background-color: #f2951e;
   text-transform: uppercase;
-  width: 13.5em;
+  width: 15em;
   height: 3.5625em;
   border: none;
   font-size: 0.75em;
   font-family: helvetica;
   padding: 0;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 #header-menu .header-menu .header-btn button:nth-child(2) {
   color: #5d3708;
   background-color: #d48117;
   text-transform: none;
-  width: 13.5em;
+  width: 15em;
   height: 3.5625em;
   border: none;
   font-size: 0.75em;
   font-family: helvetica;
   padding: 0;
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 
 /*----- SECTION ONE -----*/
 #section-one {
   background: url("../../assets/road-bcg.jpg") center no-repeat;
 }
-#section-one .row {
+#section-one .row .col-lg-3,
+#section-one .row .col-lg-6 {
   margin-top: 30px;
 }
 #section-one .row div,
@@ -208,10 +217,12 @@ nav .navbar-collapse .navbar-nav {
   background-color: #f2951e;
   color: white;
   font-family: helvetica;
+  position: absolute;
+  width: 90%;
 }
 #section-one .last-deals div {
-  margin: 0 auto;
   width: 50%;
+  margin: 0 auto;
 }
 #section-one .last-deals p {
   margin: 0;
@@ -247,6 +258,8 @@ nav .navbar-collapse .navbar-nav {
   font-size: 0.75em;
   font-family: helvetica;
   padding: 0;
+  letter-spacing: 2px;
+  font-weight: 300;
   display: block;
   margin: 0 auto;
   margin-top: 40px;
@@ -286,14 +299,15 @@ nav .navbar-collapse .navbar-nav {
 #section-three {
   font-family: helvetica;
 }
-#section-three h2 {
+#section-three h1 {
   font-size: 22px;
   letter-spacing: 4px;
   color: #27282d;
   font-weight: bold;
   margin-bottom: 100px;
+  text-transform: uppercase;
 }
-#section-three h2:before {
+#section-three h1:before {
   content: "";
   display: block;
   width: 25%;
@@ -313,14 +327,20 @@ nav .navbar-collapse .navbar-nav {
 
 /*----- FOOTER -----*/
 footer {
+  margin-top: 100px;
   color: #929292;
   font-family: helvetica;
+  background: url("../../assets/footer-bcg.jpg") center no-repeat;
+  padding-bottom: 50px;
 }
 footer ul {
   font-size: 0.9375em;
   letter-spacing: 2px;
   font-weight: 300;
   text-transform: uppercase;
+}
+footer ul li {
+  margin-top: 50px;
 }
 footer .border-footer {
   background-color: #929292;
