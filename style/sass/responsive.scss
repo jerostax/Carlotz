@@ -1,3 +1,6 @@
+// Variables
+$darkGrey: #27282d;
+
 @media screen and (max-width: 650px) {
   #top-bar {
     span {
@@ -8,5 +11,8 @@
         display: none;
       }
     }
+  }
+  #section-two {
+    background-color: $darkGrey !important;
   }
 }

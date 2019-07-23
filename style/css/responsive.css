@@ -5,6 +5,10 @@
   #top-bar #top-bar-right span {
     display: none;
   }
+
+  #section-two {
+    background-color: #27282d !important;
+  }
 }
 
 /*# sourceMappingURL=responsive.css.map */
